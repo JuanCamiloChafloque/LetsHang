@@ -1,5 +1,5 @@
 # LetsHang
-Proyecto semestral de la clase de computación móvil 2020-3
+Proyecto semestral de la clase de computación móvil 2020-3: https://github.com/compumovil2020/LetsHang
 
 ![Logo](https://i.imgur.com/0lIcU9p.png)
 
