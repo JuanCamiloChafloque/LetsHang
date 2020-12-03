@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:fillViewport="true"
+    android:padding="14dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".activities.FiltersActivity">
+
+        <TextView
+            android:id="@+id/tvTipoEventoFilters"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:text="Tipo de evento"
+            android:textSize="16dp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.501"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/etFechaFinFilters"
+            android:fontFamily="@font/coves_bold"
+            android:textColor="@color/secondaryColor"/>
+
+        <TextView
+            android:id="@+id/tvFechaFilters"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="64dp"
+            android:fontFamily="@font/coves_bold"
+            android:text="Fecha"
+            android:textColor="@color/secondaryColor"
+            android:textSize="16dp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/sbDistanciaFilters" />
+
+        <TextView
+            android:id="@+id/tvDistanciaFilters"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="68dp"
+            android:fontFamily="@font/coves_bold"
+            android:text="Distancia"
+            android:textColor="@color/secondaryColor"
+            android:textSize="16dp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <SeekBar
+            android:id="@+id/sbDistanciaFilters"
+            android:layout_width="204dp"
+            android:layout_height="19dp"
+            android:layout_marginTop="25dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvDistanciaFilters" />
+
+        <TextView
+            android:id="@+id/tvDistanciaInicioFilters"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="112dp"
+            android:layout_marginEnd="4dp"
+            android:fontFamily="@font/coves_bold"
+            android:text="0km"
+            android:textSize="16dp"
+            app:layout_constraintEnd_toStartOf="@+id/sbDistanciaFilters"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tvDistanciaFinFilters"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="112dp"
+            android:fontFamily="@font/coves_bold"
+            android:text="200km"
+            android:textSize="16dp"
+            app:layout_constraintStart_toEndOf="@+id/sbDistanciaFilters"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/etFechaInicioFilters"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="28dp"
+            android:ems="10"
+            android:inputType="date"
+            android:focusable="false"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvFechaFilters" />
+
+        <TextView
+            android:id="@+id/tvFechaInicioFilters"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="121dp"
+            android:layout_marginEnd="12dp"
+            android:text="Inicio"
+            android:textSize="18dp"
+            app:layout_constraintEnd_toStartOf="@+id/etFechaInicioFilters"
+            app:layout_constraintTop_toBottomOf="@+id/tvDistanciaInicioFilters" />
+
+        <EditText
+            android:id="@+id/etFechaFinFilters"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="44dp"
+            android:ems="10"
+            android:inputType="text"
+            android:focusable="false"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/etFechaInicioFilters" />
+
+        <TextView
+            android:id="@+id/tvFechaFinFilters"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="68dp"
+            android:layout_marginEnd="12dp"
+            android:text="Fin"
+            android:textSize="18dp"
+            app:layout_constraintEnd_toStartOf="@+id/etFechaFinFilters"
+            app:layout_constraintTop_toBottomOf="@+id/tvFechaInicioFilters" />
+
+        <Button
+            android:id="@+id/btnAplicarFilters"
+            style="@style/form_normal"
+            android:layout_width="126dp"
+            android:layout_height="55dp"
+            android:layout_marginTop="50dp"
+            android:text="Aplicar Filtros"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/llFilters1" />
+
+        <ImageView
+            android:id="@+id/ivCalendarFilters"
+            android:layout_width="47dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="27dp"
+            android:layout_marginTop="53dp"
+            app:layout_constraintStart_toEndOf="@+id/tvFechaFilters"
+            app:layout_constraintTop_toBottomOf="@+id/sbDistanciaFilters"
+            app:srcCompat="@drawable/icn_calendar" />
+
+        <TextView
+            android:id="@+id/tvSeekValue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/coves_bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <LinearLayout
+            android:id="@+id/llFilters1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:orientation="vertical"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvTipoEventoFilters">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <CheckBox
+                    android:id="@+id/cbDeportivoFilters"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="Deportivo" />
+
+                <CheckBox
+                    android:id="@+id/cbSocialFilters"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="Evento Social" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <CheckBox
+                    android:id="@+id/cbAcademicoFilters"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="Académico" />
+
+                <CheckBox
+                    android:id="@+id/cbMusicalFilters"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="Musical" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <CheckBox
+                    android:id="@+id/cbJuegoFilters"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.5"
+                    android:gravity="center"
+                    android:text="Juegos" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.5"
+                    android:gravity="center"
+                    android:text="" />
+
+            </LinearLayout>
+
+
+
+
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

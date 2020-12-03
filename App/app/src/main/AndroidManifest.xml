@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.letshang">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+
+
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/lets_hang_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/lets_hang_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <service android:name=".providers.NotificationService" />
+
+
+        <activity android:name=".activities.ChatAdminActivity"></activity>
+
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="@string/google_maps_key" />
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+
+        <activity
+            android:name=".activities.ChatEventoActivity"
+            android:windowSoftInputMode="adjustPan" />
+        <activity android:name=".activities.InformacionPerfilActivity" />
+        <activity android:name=".activities.RegistroAdicionalActivity" />
+        <activity android:name=".activities.AdministrarPerfilActivity" />
+        <activity android:name=".activities.ModificarEventoActivity" />
+        <activity android:name=".activities.RegistroActivity" />
+        <activity android:name=".activities.MapActivity" />
+        <activity android:name=".activities.LoginActivity" />
+        <activity android:name=".activities.FiltersActivity" />
+        <activity android:name=".activities.CrearEventoActivity" />
+        <activity android:name=".activities.EventosInscritosActivity" />
+        <activity android:name=".activities.PrincipalActivity" />
+        <activity android:name=".activities.CrearSugerenciaActivity" />
+        <activity android:name=".activities.MainActivity" />
+        <activity android:name=".activities.ReglasCondicionesActivity" />
+        <activity android:name=".activities.DescripcionEventoActivity" />
+        <activity android:name=".activities.PerfilHostActivity" />
+        <activity android:name=".activities.StartActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

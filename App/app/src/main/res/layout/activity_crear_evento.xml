@@ -1,0 +1,428 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".activities.CrearEventoActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="14dp">
+
+            <TextView
+                android:id="@+id/tvTituloCrearEvento"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="48dp"
+                android:fontFamily="@font/coves_bold"
+                android:text="CREAR EVENTO"
+                android:textColor="@color/secondaryColor"
+                android:textSize="30dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <EditText
+                android:id="@+id/etNombreCrearEvento"
+                style="@style/form_big"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                android:backgroundTint="@color/secondaryColor"
+                android:ems="10"
+                android:gravity="center"
+                android:hint="NOMBRE DEL EVENTO"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvTituloCrearEvento" />
+
+            <EditText
+                android:id="@+id/etPrecioCrearEvento"
+                style="@style/form_big"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/secondaryColor"
+                android:ems="10"
+                android:layout_marginTop="20dp"
+                android:gravity="center"
+                android:hint="VALOR"
+                android:inputType="number"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/etNombreCrearEvento" />
+
+            <EditText
+                android:id="@+id/etCapacidadCrearEvento"
+                style="@style/form_big"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:backgroundTint="@color/secondaryColor"
+                android:ems="10"
+                android:gravity="center"
+                android:hint="CAPACIDAD MAXIMA"
+                android:inputType="number"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/etPrecioCrearEvento" />
+
+            <TextView
+                android:id="@+id/tvFechasCrearEvento"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="100dp"
+                android:fontFamily="@font/coves_bold"
+                android:text="Fechas"
+                android:textColor="@color/secondaryColor"
+                android:textSize="18dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/etPrecioCrearEvento" />
+
+            <LinearLayout
+                android:id="@+id/llCrearEvento1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvFechasCrearEvento">
+
+                <EditText
+                    android:id="@+id/etFechaInicioCrearEvento"
+                    android:layout_width="2dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:backgroundTint="@color/secondaryColor"
+                    android:ems="10"
+                    android:hint="Inicio"
+                    android:inputType="text"
+                    android:focusable="false"
+                    />
+
+                <ImageView
+                    android:id="@+id/ivCalendarCrearEvento"
+                    style="@style/icn_calendar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+                <EditText
+                    android:id="@+id/etFechaFinCrearEvento"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:backgroundTint="@color/secondaryColor"
+                    android:ems="10"
+                    android:hint="Final"
+                    android:inputType="text"
+                    android:focusable="false"
+                   />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/llCrearEvento2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:orientation="vertical"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/llCrearEvento1">
+
+                <TextView
+                    android:id="@+id/tvTipoEventoCrearEvento"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/secondaryColor"
+                    android:textSize="20dp"
+                    android:gravity="center"
+                    android:text="Tipo de evento" />
+
+                <RadioGroup
+                    android:id="@+id/rgTipoEventoCrearEvento"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" >
+
+                    <RadioButton
+                        android:id="@+id/rbSportCrearEvento"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Deportivo" />
+                    <RadioButton
+                        android:id="@+id/rbSocialCrearEvento"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Social" />
+                    <RadioButton
+                        android:id="@+id/rbGameCrearEvento"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Juego" />
+                    <RadioButton
+                        android:id="@+id/rbMusicCrearEvento"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Musical" />
+                    <RadioButton
+                        android:id="@+id/rbAcademicCrearEvento"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Académico" />
+
+                </RadioGroup>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/llEventoEspecifico"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintTop_toBottomOf="@+id/llCrearEvento2"
+                android:gravity="center">
+
+                <include
+                    android:id="@+id/lyEventoMusical"
+                    android:visibility="gone"
+                    layout="@layout/activity_create_music_event"/>
+                <include
+                    android:id="@+id/lyEventoAcademico"
+                    android:visibility="gone"
+                    layout="@layout/activity_create_academical_event"/>
+                <include
+                    android:id="@+id/lyEventoGame"
+                    android:visibility="gone"
+                    layout="@layout/activity_create_game_event"/>
+                <include
+                    android:id="@+id/lyEventoSocial"
+                    android:visibility="gone"
+                    layout="@layout/activity_create_social_event"/>
+                <include
+                    android:id="@+id/lyEventoDeportivo"
+                    android:visibility="gone"
+                    layout="@layout/activity_create_sport_event"/>
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tvUbicacion"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:text="Ubicación"
+                android:textColor="@color/secondaryColor"
+                android:textSize="20dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.498"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/llEventoEspecifico" />
+
+            <EditText
+                android:id="@+id/etLugarCrearEvento"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:ems="10"
+                android:imeOptions="actionSend"
+                android:gravity="start|top"
+                android:inputType="text"
+                android:hint="Digite una ubicación o seleccione una"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvUbicacion" />
+
+            <com.example.letshang.ui.dialog.CustomMapView
+                android:id="@+id/mpMapCrearEvento"
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="15dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/etLugarCrearEvento"
+                app:srcCompat="@drawable/rute_map" />
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:text="Descripción"
+                android:textColor="@color/secondaryColor"
+                android:textSize="20dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.498"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/mpMapCrearEvento" />
+
+            <EditText
+                android:id="@+id/editTextTextMultiLine"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:ems="10"
+                android:gravity="start|top"
+                android:inputType="textMultiLine"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:text="Tags"
+                android:textSize="20dp"
+                android:textColor="@color/secondaryColor"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/editTextTextMultiLine" />
+
+            <EditText
+                android:id="@+id/etTagsCrearEvento"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:ems="10"
+                android:fontFamily="@font/coves_bold"
+                android:backgroundTint="@color/secondaryColor"
+                android:inputType="textPersonName"
+                android:hint="Nuevo Tag"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView3"
+                android:imeOptions="actionDone"/>
+
+            <androidx.core.widget.NestedScrollView
+                android:id="@+id/swChips"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/etTagsCrearEvento">
+
+                <LinearLayout
+                    android:id="@+id/llCrearEventoChip"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical"
+                    app:layout_constraintEnd_toEndOf="parent">
+
+
+                    <com.google.android.material.chip.ChipGroup
+                        android:id="@+id/cgTagsCrearEvento"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                </LinearLayout>
+
+            </androidx.core.widget.NestedScrollView>
+
+            <Button
+                android:id="@+id/btnCrearEvento"
+                style="@style/form_normal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="50dp"
+                android:text="Continuar"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/infoClimaCardView" />
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/infoClimaCardView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="120dp"
+                android:elevation="4dp"
+                app:cardCornerRadius="10dp"
+                app:cardElevation="1dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/swChips"
+                app:layout_goneMarginTop="10dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tvPrediccionClima"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="30dp"
+                        android:text="Predicción Clima"
+                        android:textSize="20dp"
+                        android:textColor="@color/secondaryColor"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/editTextTextMultiLine" />
+                    <TextView
+                        android:id="@+id/tvCuidadCrearEvento"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/coves_bold"
+                        android:text="Bogotá"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+
+                    <ImageView
+                        android:id="@+id/ivClimaCrearEvento"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:src="@drawable/wheather" />
+
+                    <TextView
+                        android:id="@+id/tvTempCrearEvento"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/coves_bold"
+                        android:text="15 °C"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+
+                    <TextView
+                        android:id="@+id/tvDescrCrearEvento"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/coves_bold"
+                        android:text="Descripción"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+
+                    <TextView
+                        android:id="@+id/tvAviso"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/coves_bold"
+                        android:textStyle="bold"
+                        android:text="¡Atencion! ¡La predicción es de dos días desde la fecha actual!"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
